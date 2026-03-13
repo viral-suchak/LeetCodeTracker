@@ -6,14 +6,66 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FE83F5952F36FA8700812FDB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE83F5942F36FA8700812FDB /* WidgetKit.framework */; };
+		FE83F5972F36FA8700812FDB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE83F5962F36FA8700812FDB /* SwiftUI.framework */; };
+		FE83F5A62F36FA8A00812FDB /* LeetCodeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE83F5922F36FA8700812FDB /* LeetCodeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE83F5A42F36FA8A00812FDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE83F5782F36FA2D00812FDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE83F5912F36FA8700812FDB;
+			remoteInfo = LeetCodeWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE83F5AB2F36FA8A00812FDB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FE83F5A62F36FA8A00812FDB /* LeetCodeWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		FE83F5802F36FA2D00812FDB /* LeetCodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE83F5922F36FA8700812FDB /* LeetCodeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LeetCodeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE83F5942F36FA8700812FDB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FE83F5962F36FA8700812FDB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FE96A1962F63C29600412B91 /* LeetCodeWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeetCodeWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FE83F5A72F36FA8A00812FDB /* Exceptions for "LeetCodeWidget" folder in "LeetCodeWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FE83F5912F36FA8700812FDB /* LeetCodeWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FE83F5822F36FA2D00812FDB /* LeetCodeTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LeetCodeTracker;
+			sourceTree = "<group>";
+		};
+		FE83F5982F36FA8700812FDB /* LeetCodeWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FE83F5A72F36FA8A00812FDB /* Exceptions for "LeetCodeWidget" folder in "LeetCodeWidgetExtension" target */,
+			);
+			path = LeetCodeWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +78,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE83F58F2F36FA8700812FDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE83F5972F36FA8700812FDB /* SwiftUI.framework in Frameworks */,
+				FE83F5952F36FA8700812FDB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FE83F5772F36FA2D00812FDB = {
 			isa = PBXGroup;
 			children = (
+				FE96A1962F63C29600412B91 /* LeetCodeWidgetExtension.entitlements */,
 				FE83F5822F36FA2D00812FDB /* LeetCodeTracker */,
+				FE83F5982F36FA8700812FDB /* LeetCodeWidget */,
+				FE83F5932F36FA8700812FDB /* Frameworks */,
 				FE83F5812F36FA2D00812FDB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +105,18 @@
 			isa = PBXGroup;
 			children = (
 				FE83F5802F36FA2D00812FDB /* LeetCodeTracker.app */,
+				FE83F5922F36FA8700812FDB /* LeetCodeWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FE83F5932F36FA8700812FDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE83F5942F36FA8700812FDB /* WidgetKit.framework */,
+				FE83F5962F36FA8700812FDB /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +129,12 @@
 				FE83F57C2F36FA2D00812FDB /* Sources */,
 				FE83F57D2F36FA2D00812FDB /* Frameworks */,
 				FE83F57E2F36FA2D00812FDB /* Resources */,
+				FE83F5AB2F36FA8A00812FDB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FE83F5A52F36FA8A00812FDB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				FE83F5822F36FA2D00812FDB /* LeetCodeTracker */,
@@ -69,6 +145,28 @@
 			productName = LeetCodeTracker;
 			productReference = FE83F5802F36FA2D00812FDB /* LeetCodeTracker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FE83F5912F36FA8700812FDB /* LeetCodeWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE83F5A82F36FA8A00812FDB /* Build configuration list for PBXNativeTarget "LeetCodeWidgetExtension" */;
+			buildPhases = (
+				FE83F58E2F36FA8700812FDB /* Sources */,
+				FE83F58F2F36FA8700812FDB /* Frameworks */,
+				FE83F5902F36FA8700812FDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FE83F5982F36FA8700812FDB /* LeetCodeWidget */,
+			);
+			name = LeetCodeWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = LeetCodeWidgetExtension;
+			productReference = FE83F5922F36FA8700812FDB /* LeetCodeWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +179,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					FE83F57F2F36FA2D00812FDB = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FE83F5912F36FA8700812FDB = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +201,20 @@
 			projectRoot = "";
 			targets = (
 				FE83F57F2F36FA2D00812FDB /* LeetCodeTracker */,
+				FE83F5912F36FA8700812FDB /* LeetCodeWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FE83F57E2F36FA2D00812FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE83F5902F36FA8700812FDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +231,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE83F58E2F36FA8700812FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE83F5A52F36FA8A00812FDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE83F5912F36FA8700812FDB /* LeetCodeWidgetExtension */;
+			targetProxy = FE83F5A42F36FA8A00812FDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FE83F5892F36FA2E00812FDB /* Debug */ = {
@@ -251,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeetCodeTracker/LeetCodeTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HAQWNTHFDZ;
@@ -283,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeetCodeTracker/LeetCodeTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HAQWNTHFDZ;
@@ -310,6 +436,68 @@
 			};
 			name = Release;
 		};
+		FE83F5A92F36FA8A00812FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LeetCodeWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HAQWNTHFDZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeetCodeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeetCodeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viral.LeetCodeTracker.LeetCodeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE83F5AA2F36FA8A00812FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LeetCodeWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HAQWNTHFDZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeetCodeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeetCodeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viral.LeetCodeTracker.LeetCodeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +515,15 @@
 			buildConfigurations = (
 				FE83F58C2F36FA2E00812FDB /* Debug */,
 				FE83F58D2F36FA2E00812FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE83F5A82F36FA8A00812FDB /* Build configuration list for PBXNativeTarget "LeetCodeWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE83F5A92F36FA8A00812FDB /* Debug */,
+				FE83F5AA2F36FA8A00812FDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
